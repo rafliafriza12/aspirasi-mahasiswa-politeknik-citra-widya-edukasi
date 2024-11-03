@@ -21,7 +21,7 @@ const UserLayout = () => {
   };
 
   return (
-    <div className=" w-screen h-screen flex flex-col items-center overflow-x-hidden py-10 gap-10 bg-primary scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-primary">
+    <div className=" w-screen h-screen flex flex-col items-center overflow-x-hidden py-10 gap-10 bg-primary sm:scrollbar-thumb-rounded-full sm:scrollbar-track-rounded-full sm:scrollbar-thin sm:scrollbar-thumb-slate-700 sm:scrollbar-track-primary">
       <div className=" w-full flex justify-center">
         <div className=" aspect-video w-36 sm:w-52 lg:w-64">
           <img src={Logo} alt="Logo" />
