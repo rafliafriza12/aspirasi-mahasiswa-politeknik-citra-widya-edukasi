@@ -2,6 +2,7 @@ import routes from "../routes";
 import { Route, Routes } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
+
 const UserLayout = () => {
   const getRoutes = () => {
     return routes.map((route, i) => {
@@ -27,6 +28,7 @@ const UserLayout = () => {
         </div>
       </div>
       <Routes>{getRoutes()}</Routes>
+      
     </div>
   );
 };

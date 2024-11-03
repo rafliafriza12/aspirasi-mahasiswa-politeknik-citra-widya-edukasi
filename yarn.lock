@@ -3078,6 +3078,13 @@ builtin-modules@^3.1.0:
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.3.0.tgz#cae62812b89801e9656336e46223e030386be7b6"
   integrity sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==
 
+busboy@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/busboy/-/busboy-1.6.0.tgz#966ea36a9502e43cdb9146962523b92f531f6893"
+  integrity sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==
+  dependencies:
+    streamsearch "^1.1.0"
+
 bytes@3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.2.tgz#8b0beeb98605adf1b128fa4386403c009e0221a5"
@@ -3227,6 +3234,11 @@ cliui@^7.0.2:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
+
+clsx@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
+  integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
 co@^4.6.0:
   version "4.6.0"
@@ -4553,6 +4565,13 @@ expect@^29.0.0:
     jest-matcher-utils "^29.7.0"
     jest-message-util "^29.7.0"
     jest-util "^29.7.0"
+
+express-fileupload@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/express-fileupload/-/express-fileupload-1.5.1.tgz#a8be859e9d0ffb4497634b025ecb6d17796c370e"
+  integrity sha512-LsYG1ALXEB7vlmjuSw8ABeOctMp8a31aUC5ZF55zuz7O2jLFnmJYrCv10py357ky48aEoBQ/9bVXgFynjvaPmA==
+  dependencies:
+    busboy "^1.6.0"
 
 express@^4.17.3:
   version "4.21.1"
@@ -8003,6 +8022,13 @@ react-signature-canvas@^1.0.6:
     signature_pad "^2.3.2"
     trim-canvas "^0.1.0"
 
+react-toastify@^10.0.6:
+  version "10.0.6"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-10.0.6.tgz#19c364b1150f495522c738d592d1dcc93879ade1"
+  integrity sha512-yYjp+omCDf9lhZcrZHKbSq7YMuK0zcYkDFTzfRFgTXkTFHZ1ToxwAonzA4JI5CxA91JpjFLmwEsZEgfYfOqI1A==
+  dependencies:
+    clsx "^2.1.0"
+
 react@^18.3.1:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
@@ -8662,6 +8688,11 @@ stop-iteration-iterator@^1.0.0:
   integrity sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==
   dependencies:
     internal-slot "^1.0.4"
+
+streamsearch@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/streamsearch/-/streamsearch-1.1.0.tgz#404dd1e2247ca94af554e841a8ef0eaa238da764"
+  integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 string-length@^4.0.1:
   version "4.0.2"

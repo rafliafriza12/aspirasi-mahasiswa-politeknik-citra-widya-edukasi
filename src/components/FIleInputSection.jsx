@@ -1,4 +1,16 @@
 const FileInputSection = ({ props }) => {
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            props.setter(reader.result); // Simpan base64 ke state
+        };
+        reader.readAsDataURL(file); // Membaca file sebagai base64
+        props.setFileName(file.name);
+    }
+  };
   return (
     <div>
         <label
@@ -33,10 +45,10 @@ const FileInputSection = ({ props }) => {
               drop
             </p>
             <p className="text-xs px-10 text-center text-accent">
-              Lampirkan Foto atau Vidio yang menggambarkan topik bahasan sebagai bukti pendukung. Format .jpg, .jpeg, .png atau .pdf. Ukuran maksimal 10 MB
+                {props.fileName !== "" ? props.fileName : "Lampirkan Foto yang menggambarkan topik bahasan sebagai bukti pendukung. Format .jpg, .jpeg, .png. Ukuran maksimal 10 MB"}
             </p>
           </div>
-          <input id="dropzone-file" type="file" className="hidden" />
+          <input id="dropzone-file" type="file" accept=".jpg, .jpeg, .png" onChange={handleFileChange} className="hidden" />
         </label>
       </div>
     </div>

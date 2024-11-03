@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import SignatureCanvas from "react-signature-canvas";
 
 const SignatureInputSection = ({ props }) => {
@@ -11,17 +11,22 @@ const SignatureInputSection = ({ props }) => {
 
   const saveSignature = () => {
     const dataURL = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
-    props.setter(dataURL);
-    // console.log("Signature saved:", props.getter);
+    const date = new Date();
+    const file = props.helper(dataURL, `signature-${date.getTime()}.png`);
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      props.setter(reader.result); // Simpan base64 ke state
+    };
+    reader.readAsDataURL(file);
   };
+
+  useEffect(() => {
+    if (props.getter === null) sigCanvas.current.clear();
+  }, [props.getter]);
 
   return (
     <div className=" w-full">
-      <h1
-        className=" text-base text-accent font-semibold"
-      >
-        {props.title}
-      </h1>
+      <h1 className=" text-base text-accent font-semibold">{props.title}</h1>
       <SignatureCanvas
         ref={sigCanvas}
         penColor="black"

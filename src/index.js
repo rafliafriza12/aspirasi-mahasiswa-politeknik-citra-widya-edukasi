@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UserLayout from "./layout/User";
 import AuthLayout from "./layout/Auth";
 import AdminLayout from "./layout/Admin";
+import { ToastContainer} from "react-toastify";
+import { Bounce } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +19,19 @@ root.render(
         <Route path="/admin/dashboard/*" element={<AdminLayout />} />
       </Routes>
     </BrowserRouter>
+        <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
   </React.StrictMode>
 );
 

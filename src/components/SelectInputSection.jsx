@@ -43,16 +43,31 @@ const SelectInputSection = ({ props }) => {
           className="py-2 text-sm text-accent font-semibold w-full"
           aria-labelledby="dropdownDefaultButton"
         >
-          {props.selectType.map((type, i) => {
-            return (
-              <li className="w-full" key={i}>
-                <p
-                  onClick={() => handleSelect(type)}
-                  className="block w-full px-4 py-2 hover:bg-gray-100 "
-                >{type}</p>
-              </li>
-            );
-          })}
+          {props.title === "Kategori"
+            ? props.selectType.map((type, i) => {
+                return (
+                  <li className="w-full" key={i}>
+                    <p
+                      onClick={() => handleSelect(type.category)}
+                      className="block w-full px-4 py-2 hover:bg-gray-100 "
+                    >
+                      {type.category}
+                    </p>
+                  </li>
+                );
+              })
+            : props.selectType.map((type, i) => {
+                return (
+                  <li className="w-full" key={i}>
+                    <p
+                      onClick={() => handleSelect(type.lecture)}
+                      className="block w-full px-4 py-2 hover:bg-gray-100 "
+                    >
+                      {type.lecture}
+                    </p>
+                  </li>
+                );
+              })}
         </ul>
       </div>
     </div>
